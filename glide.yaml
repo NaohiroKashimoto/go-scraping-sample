@@ -1,0 +1,3 @@
+package: github.com/NaohiroKashimoto/go-scraping-sample
+import:
+- package: github.com/yhat/scrape

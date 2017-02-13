@@ -1,0 +1,6 @@
+hash: 1e22e8a374bf4cb26591ea69718b00bbacc52f02c42c5d9fb030800892ad2660
+updated: 2017-02-13T14:50:47.273428853+09:00
+imports:
+- name: github.com/yhat/scrape
+  version: 24b7890b0945459dbf91743e4d2ac5d75a51fee2
+devImports: []
