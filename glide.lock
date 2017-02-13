@@ -1,6 +1,19 @@
-hash: 1e22e8a374bf4cb26591ea69718b00bbacc52f02c42c5d9fb030800892ad2660
-updated: 2017-02-13T14:50:47.273428853+09:00
+hash: 1b9954a2bb92bd829824d5ce7461c567628958dc729c9c55be0a541c6f932f9d
+updated: 2017-02-13T19:51:47.908096951+09:00
 imports:
+- name: github.com/andybalholm/cascadia
+  version: 349dd0209470eabd9514242c688c403c0926d266
+- name: github.com/PuerkitoBio/goquery
+  version: e1271ee34c6a305e38566ecd27ae374944907ee9
 - name: github.com/yhat/scrape
   version: 24b7890b0945459dbf91743e4d2ac5d75a51fee2
+- name: golang.org/x/net
+  version: 61557ac0112b576429a0df080e1c2cef5dfbb642
+  subpackages:
+  - html
+  - html/atom
+- name: golang.org/x/text
+  version: 06d6eba81293389cafdff7fca90d75592194b2d9
+  subpackages:
+  - encoding/japanese
 devImports: []
