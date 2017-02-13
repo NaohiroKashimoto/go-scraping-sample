@@ -5,3 +5,4 @@ import:
 - package: golang.org/x/text
   subpackages:
   - encoding/japanese
+- package: github.com/sclevine/agouti

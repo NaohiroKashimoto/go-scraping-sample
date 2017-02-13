@@ -7,11 +7,50 @@ import (
 	"fmt"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/sclevine/agouti"
 	"golang.org/x/text/encoding/japanese"
 )
 
 func main() {
-	goqueryexample()
+	//goqueryexample()
+	loginvc()
+}
+
+func loginvc() {
+	driver := agouti.ChromeDriver()
+	if err := driver.Start(); err != nil {
+		log.Fatal(err.Error())
+	}
+	defer driver.Stop()
+
+	page, err := driver.NewPage(agouti.Browser("firefox"))
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
+	if err := page.Navigate("https://www.valuecommerce.ne.jp/"); err != nil {
+		log.Fatal(err.Error())
+	}
+
+	loginUrl, err := page.URL()
+	if err != nil {
+		log.Fatal(err.Error(), loginUrl)
+	}
+
+	fmt.Println(page.HTML())
+
+	page.Find("input#login_form_emailAddress").Fill("osaifu@ceres-inc.jp")
+	page.Find("input#login_form_encryptedPasswd").Fill("r8nzfrnz")
+	//fmt.Println(page.First("input.btn_green").Text())
+	//fmt.Println(page.Find("input.btn_green").Text())
+
+	return
+	//html body div.login_category.affiliate form.form-horizontal input.btn_green
+	if err := page.Find("html body div.login_category.affiliate form.form-horizontal input.btn_green").Click(); err != nil {
+		log.Fatal(err.Error())
+	}
+
+	fmt.Println(page.String())
 }
 
 func goqueryexample() {

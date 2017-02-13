@@ -1,10 +1,12 @@
-hash: 1b9954a2bb92bd829824d5ce7461c567628958dc729c9c55be0a541c6f932f9d
-updated: 2017-02-13T19:51:47.908096951+09:00
+hash: f92fcb54e2f12e4b4288b8a68988533e6ba155912dbfa86239f56730e517bf2e
+updated: 2017-02-13T20:13:05.752462207+09:00
 imports:
 - name: github.com/andybalholm/cascadia
   version: 349dd0209470eabd9514242c688c403c0926d266
 - name: github.com/PuerkitoBio/goquery
   version: e1271ee34c6a305e38566ecd27ae374944907ee9
+- name: github.com/sclevine/agouti
+  version: da6ce95d89acab048b648c71fb45b57622d3457e
 - name: github.com/yhat/scrape
   version: 24b7890b0945459dbf91743e4d2ac5d75a51fee2
 - name: golang.org/x/net
@@ -16,4 +18,8 @@ imports:
   version: 06d6eba81293389cafdff7fca90d75592194b2d9
   subpackages:
   - encoding/japanese
+  - encoding
+  - encoding/internal
+  - encoding/internal/identifier
+  - transform
 devImports: []
