@@ -37,20 +37,17 @@ func loginvc() {
 		log.Fatal(err.Error(), loginUrl)
 	}
 
+	page.Find("iframe#frame1").SwitchToFrame()
 	fmt.Println(page.HTML())
 
 	page.Find("input#login_form_emailAddress").Fill("osaifu@ceres-inc.jp")
 	page.Find("input#login_form_encryptedPasswd").Fill("r8nzfrnz")
-	//fmt.Println(page.First("input.btn_green").Text())
-	//fmt.Println(page.Find("input.btn_green").Text())
 
-	return
-	//html body div.login_category.affiliate form.form-horizontal input.btn_green
-	if err := page.Find("html body div.login_category.affiliate form.form-horizontal input.btn_green").Click(); err != nil {
+	if err := page.Find("input.btn_green").Click(); err != nil {
 		log.Fatal(err.Error())
 	}
 
-	fmt.Println(page.String())
+	page.Screenshot("test")
 }
 
 func goqueryexample() {
